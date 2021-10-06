@@ -11,6 +11,91 @@
 
 <body>
 
-    <p>Chaman re</p>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+
+        .container {
+            background: url(background.png);
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-glass img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 17px;
+        }
+
+        .glass-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 40px;
+            background: rgba(255, 255, 255, 0.65);
+            filter: drop-shadow(5px 10px 40px rgba(0, 0, 0, 0.05));
+
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            opacity: 0;
+            margin-top: -80px;
+            transition: all 0.2s ease;
+            animation: EnterIn 0.2s ease;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: transform 200ms;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        a:hover>.glass-card {
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        @keyframes EnterIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0), scale();
+            }
+        }
+    </style>
+
+    <div class="container">
+        <a href="https://drive.google.com/drive/folders/1U2x4bZ0TnbVQMMeY5snDImc-ylxxEjvN?usp=sharing">
+            <div data-scale="0.8" class="glass-card">
+                <div class="img-glass">
+                    <img src="/googledrive.png" alt="Illustration">
+                </div>
+                <div class="info">
+                    <h1>Archive of AA-305</h1>
+                    <p>Siddharth Tank | Abhishek Biswas</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>
+
+</body>
 
 </html>
