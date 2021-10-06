@@ -20,7 +20,7 @@
         }
 
         .container {
-            background: url(https://products.ls.graphics/mesh-gradients/images/16.-Medium-Purple_1.jpg);
+            background: url(background.png);
             height: 100vh;
             background-size: cover;
             display: flex;
@@ -33,7 +33,7 @@
             width: 100px;
             height: auto;
             border-radius: 8px;
-            margin-right: 17px
+            margin-right: 17px;
         }
 
         .glass-card {
@@ -42,14 +42,14 @@
             align-items: center;
             justify-content: center;
             padding: 30px 40px;
-            background: radial-gradient(146.43% 4982.37% at -4.45% -26.53%, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 100%);
+            background: rgba(255, 255, 255, 0.65);
             filter: drop-shadow(5px 10px 40px rgba(0, 0, 0, 0.05));
 
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(4px);
             border-radius: 12px;
             opacity: 0;
             margin-top: -80px;
-            transition: all 0.2s ease-in;
+            transition: all 0.2s ease;
             animation: EnterIn 0.2s ease;
             -webkit-animation-fill-mode: forwards;
         }
@@ -57,12 +57,15 @@
         a {
             text-decoration: none;
             color: black;
-            transition: transform 250ms;
+            transition: transform 200ms;
         }
 
         a:hover {
-            transform: scale(1.02);
             cursor: pointer;
+        }
+
+        a:hover>.glass-card {
+            background: rgba(255, 255, 255, 0.75);
         }
 
         @keyframes EnterIn {
@@ -73,7 +76,7 @@
 
             100% {
                 opacity: 1;
-                transform: translateY(0), scale()
+                transform: translateY(0), scale();
             }
         }
     </style>
